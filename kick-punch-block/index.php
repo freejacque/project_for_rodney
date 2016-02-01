@@ -4,3 +4,5 @@
   <div id="content" class="site-content" role="main">
   </div>
 </div>
+
+<?php get_sidebar(); ?>
