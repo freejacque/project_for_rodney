@@ -38,5 +38,5 @@ if( ! function_exists( 'kpb_setup' ) ):
     ));
   }
 endif;
-// kpb_setup is being "hooked" into the function after_setup_theme
+// telling wordpres to run kpb_setup when it runs after_setup_theme
 add_action( 'after_setup_theme', 'kpb_setup' );
