@@ -40,3 +40,5 @@ if( ! function_exists( 'kpb_setup' ) ):
 endif;
 // telling wordpres to run kpb_setup when it runs after_setup_theme
 add_action( 'after_setup_theme', 'kpb_setup' );
+
+// when a file is all php it's safer to omit the closing tag,, to avoid trailing white space errors
