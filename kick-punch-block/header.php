@@ -9,6 +9,13 @@
  */
 ?><!DOCTYPE html>
 
+<!--[if IE 8]>
+<html id="ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html <?php language_attributes(); ?>>
+<!--<![endif]-->
+
 <div id="page" class="hfeed site">
   <header id="masthead" class="site-header" role="banner">
     <hgroup></hgroup>
