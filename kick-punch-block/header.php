@@ -26,8 +26,10 @@
 
   wp_title( '|', true, 'right' );
 
+  // add the blog name
   bloginfo( 'name' );
 
+  //
   $site_description = get_bloginfo( 'description', 'display' );
   if($site_description && (is_home() || is_front_page() ) )
   echo " | $site_description";
