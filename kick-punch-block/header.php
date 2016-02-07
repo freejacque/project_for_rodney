@@ -58,7 +58,9 @@
         </h1>
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
       </hgroup>
-      <nav role="navigation" class="site-navigation main-navigation"></nav>
+      <nav role="navigation" class="site-navigation main-navigation">
+        <h1 class="assistive-text"><?php _e( 'Menu', 'kpb' ); ?></h1>
+      </nav>
     </header>
   </div>
   <div id="main" class="site-main">
