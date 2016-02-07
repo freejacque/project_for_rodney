@@ -44,6 +44,7 @@ add_action( 'after_setup_theme', 'kpb_setup' );
 /**
  * Enqueue scripts and styles
  */
+// TODO add other scripts
 function kpb_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
