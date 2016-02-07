@@ -50,9 +50,9 @@ function kpb_scripts() {
   if( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }
-
+  // navigation.js creates a mobile-friendly menu on smaller screens
   wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
+  // key-board-image-navigation.js can navigate through images using left & right arrows
   if(is_singular() && wp_attachment_is_image() ) {
     wp_enqueue_script( 'Keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
   }
