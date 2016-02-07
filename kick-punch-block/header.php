@@ -47,12 +47,16 @@
   <?php wp_head(); ?> <!-- a required hook -->
 </head>
 
-<!-- body_class() adds CSS classes -->
+<!-- body_class() adds CSS classes for different types of pages -->
 <body <?php body_class(); ?>>
 
   <div id="page" class="hfeed site">
     <header id="masthead" class="site-header" role="banner">
-      <hgroup></hgroup>
+      <hgroup>
+        <h1 class="site-title">
+          <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+        </h1>
+      </hgroup>
       <nav role="navigation" class="site-navigation main-navigation"></nav>
     </header>
   </div>
