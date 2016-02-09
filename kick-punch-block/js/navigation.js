@@ -3,6 +3,8 @@
  *
  * Handles toggling the navigation menu for small screens and enables tab
  * support for dropdown menus.
+ *
+ * from: https://github.com/Automattic/_s/blob/master/js/navigation.js
  */
 ( function() {
   var container, button, menu, links, subMenus;
