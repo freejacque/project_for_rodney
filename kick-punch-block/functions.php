@@ -59,4 +59,5 @@ function kpb_scripts() {
   }
 }
 add_action( 'wp_enqueue_scripts', 'kpb_scripts');
+
 // when a file is all php it's safer to omit the closing tag,, to avoid trailing white space errors
