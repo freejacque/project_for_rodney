@@ -1,3 +1,10 @@
+/* keyboard-image-navigation.js
+ *
+ * Taken from: https://github.com/Automattic/_s/blob/430d379f4bc97e6f20d366ec4a06588c5c614abc/js/keyboard-image-navigation.js
+ *
+ * scroll through images with arrow keys
+ */
+
 jQuery( document ).ready( function( $ ) {
   $( document ).keydown( function( e ) {
     var url = false;
