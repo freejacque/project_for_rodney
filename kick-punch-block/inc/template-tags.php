@@ -25,3 +25,22 @@ function kpb_posted_on() {
   );
 }
 endif;
+
+/**
+ * Returns true if a blog has > 1 category
+ * @since Kick-Punch-Block 1.0
+ */
+function kpb_categorized_blog() {
+  if (false === ( $all_the_categories = get_transient( 'all_the_categories' ) ) ) {
+    $all_the_categories = get_categories( array( 'hide_empty' => 1, ) );
+
+    $all_the_categories = count( $all_the_categories );
+    set_transient( 'all_the_categories', $all_the_categories );
+  }
+
+  if ( '1' != $all_the_categories ) {
+    return true;
+  } else {
+    return false;
+  }
+}
