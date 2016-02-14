@@ -14,6 +14,7 @@ get_header(); ?>
     <?php if ( have_posts() ) : ?>
       <?php ?>
       <?php while ( have_posts() ) : the_post(); ?>
+      <!--  use the code from content.php by default, unless there is a specific template needed -->
         <?php get_template_part( 'content' , get_post_format() ); ?>
       <?php endwhile; ?>
     <?php endif; ?>
