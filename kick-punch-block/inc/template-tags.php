@@ -41,6 +41,7 @@ function kpb_categorized_blog() {
   }
 
   if ( '1' != $all_the_categories ) {
+    //  if there is > 1 category return true
     return true;
   } else {
     return false;
