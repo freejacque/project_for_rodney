@@ -32,6 +32,7 @@ endif;
  */
 function kpb_categorized_blog() {
   if (false === ( $all_the_categories = get_transient( 'all_the_categories' ) ) ) {
+    // create an array of all the categories attached to posts
     $all_the_categories = get_categories( array( 'hide_empty' => 1, ) );
 
     $all_the_categories = count( $all_the_categories );
