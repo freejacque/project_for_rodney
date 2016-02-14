@@ -47,3 +47,13 @@ function kpb_categorized_blog() {
     return false;
   }
 }
+
+/**
+ * Flush the transients used in kpb_categorized_blog
+ * @since Kick-Punch-Block 1.0
+ */
+function kpb_category_transient_flusher() {
+  delete_transient( 'all_the_categories' );
+}
+add_action( 'edit_category', 'kpb_category_transient_flusher' );
+add_action( 'save_post', 'kpb_category_transient_flusher' );
