@@ -57,3 +57,53 @@ function kpb_category_transient_flusher() {
 }
 add_action( 'edit_category', 'kpb_category_transient_flusher' );
 add_action( 'save_post', 'kpb_category_transient_flusher' );
+
+
+if ( ! function_exits( 'kpb_content_nav' ) ):
+/**
+ * Display navigation to next/previous pages when applicable
+ * @since Kick-Punch-Block 1.0
+ */
+function kpb_content_nav( $nav_id ) {
+  global $wp_query, $post;
+
+  if( is_single() ) {
+    $previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+    $next - get_adjacent_post( false, '', false );
+
+    if( ! $next && ! $previous )
+      return;
+  }
+
+  if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
+    return;
+
+  $nav_class = 'site-navigation paging-navigation';
+  if ( is_single() )
+    $nav_class = 'site-navigation post-navigation';
+
+  ?>
+  <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
+    <h1 class="assistive-text"><?php _e( 'Post navigation', 'kpb' ); ?></h1>
+
+  <?php if ( is_single() ) : ?>
+
+    <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'kpb' ) . '</span> %title' ); ?>
+    <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'kpb' ) . '</span>' ); ?>
+
+  <?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : ?>
+
+    <?php if ( get_next_posts_link() ) : ?>
+      <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'kpb' ) ); ?></div>
+    <?php endif; ?>
+
+    <?php if ( get_previous_posts_link() ) : ?>
+      <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'kpb' ) ); ?></div>
+    <?php endif; ?>
+
+  <?php endif; ?>
+
+  </nav>
+  <?php
+}
+endif;
