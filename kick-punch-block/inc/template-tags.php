@@ -67,6 +67,7 @@ if ( ! function_exits( 'kpb_content_nav' ) ):
 function kpb_content_nav( $nav_id ) {
   global $wp_query, $post;
 
+  //  don't show on single pages if there is nowhere to navigate
   if( is_single() ) {
     $previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
     $next - get_adjacent_post( false, '', false );
