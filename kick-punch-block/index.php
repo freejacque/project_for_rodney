@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <div id="content" class="site-content" role="main">
     <?php if ( have_posts() ) : ?>
-      <?php ?>
+      <?php /* start the loop */ ?>
       <?php while ( have_posts() ) : the_post(); ?>
       <!--  use the code from content.php by default, unless there is a specific template needed -->
         <?php get_template_part( 'content' , get_post_format() ); ?>
