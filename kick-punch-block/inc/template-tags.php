@@ -76,6 +76,7 @@ function kpb_content_nav( $nav_id ) {
       return;
   }
 
+  //  don't print in archives if there's only 1 page
   if ( $wp_query->max_num_pages < 2 && ( is_home() || is_archive() || is_search() ) )
     return;
 
