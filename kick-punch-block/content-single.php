@@ -35,7 +35,7 @@
                 }
 
             } else {
-
+                //  if there are > 1 categories display the,
                 if ( '' != $tag_list ) {
                     $meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'kpb' );
                 } else {
