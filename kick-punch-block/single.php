@@ -19,6 +19,7 @@ get_header(); ?>
 
                 <?php shape_content_nav( 'nav-below' ); ?>
 
+                <!--  if comments are open or there is 1+ comment load the comment template -->
                 <?php if ( comments_open() || '0' != get_comments_number() )
                     comments_template( '', true );
                 ?>
