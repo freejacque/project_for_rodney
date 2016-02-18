@@ -27,7 +27,7 @@
 
             // if the post has only 1 category
             if ( ! kpb_categorized_blog() ) {
-
+                //  add meta tags
                 if ( '' != $tag_list ) {
                     $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'kpb' );
                 } else {
