@@ -10,7 +10,7 @@
         <h1 class="entry-title"><?php the_title(); ?></h1>
 
         <div class="entry-meta">
-            <?php shape_posted_on(); ?>
+            <?php kpb_posted_on(); ?>
         </div>
     </header>
 
@@ -23,10 +23,9 @@
         <?php
             /* translators: used between list items, there is a space after the comma */
             $category_list = get_the_category_list( __( ', ', 'kpb' ) );
+            $tag_list = get_the_tag_list( '', __( ', ', 'kpb' ) );
 
-                        $tag_list = get_the_tag_list( '', __( ', ', 'kpb' ) );
-
-            if ( ! shape_categorized_blog() ) {
+            if ( ! kpb_categorized_blog() ) {
 
                 if ( '' != $tag_list ) {
                     $meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'kpb' );
