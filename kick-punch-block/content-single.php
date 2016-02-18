@@ -25,6 +25,7 @@
             $category_list = get_the_category_list( __( ', ', 'kpb' ) );
             $tag_list = get_the_tag_list( '', __( ', ', 'kpb' ) );
 
+            // if the post has only 1 category
             if ( ! kpb_categorized_blog() ) {
 
                 if ( '' != $tag_list ) {
