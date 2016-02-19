@@ -57,10 +57,13 @@ get_header(); ?>
 
               if ( count( $attachments ) > 1 ) {
                 if ( isset( $attachments[ $k ] ) )
+                  // get the URL of the next image attachment
                   $next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
                 else
+                  // or get the URL of the first image attachment
                   $next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
               } else {
+                // or, if there's only 1 image, get the URL of the image
                 $next_attachment_url = wp_get_attachment_url();
               }
 
