@@ -5,7 +5,6 @@
  * @package Kick-Punch-Block
  * @since Kick-Punch-Block 1.0
  */
-
 get_header(); ?>
 
 <div id="primary" class="content-area image-attachment">
