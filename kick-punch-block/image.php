@@ -94,8 +94,10 @@ get_header(); ?>
           <!-- only trackbacks open -->
           <?php elseif ( ! comments_open() && pings_open() ) : ?>
             <?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'kpb' ), get_trackback_url() ); ?>
+          <!-- only comments open -->
           <?php elseif ( comments_open() && ! pings_open() ) : ?>
             <?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'kpb' ); ?>
+          <!-- comments & trackbacks closed -->
           <?php elseif ( ! comments_open() && ! pings_open() ) : ?>
             <?php _e( 'Both comments and trackbacks are currently closed.', 'kpb' ); ?>
           <?php endif; ?>
