@@ -44,7 +44,10 @@ get_header(); ?>
         <div class="entry-attachment">
           <div class="attachment">
             <?php
-
+              /**
+               * Get the IDs of image attachments in gallery to get the URL of the next adjacent image,
+               * or the 1st image (if it's the last image)
+               */
               $attachments = array_values( get_children( array( 'post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID' ) ) );
               foreach ( $attachments as $k => $attachment ) {
                 if ( $attachment->ID == $post->ID )
