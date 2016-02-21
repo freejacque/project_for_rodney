@@ -143,10 +143,10 @@ function kpb_comment( $comment, $args, $depth ) {
           <br />
         <?php endif; ?>
 
-        <div class="comment-meta commentmetadata">
+        <div class="comment-meta comment-meta-data">
           <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
           <?php
-
+              /* translators: 1: date, 2: time */
               printf( __( '%1$s at %2$s', 'kpb' ), get_comment_date(), get_comment_time() ); ?>
           </time></a>
           <?php edit_comment_link( __( '(Edit)', 'kpb' ), ' ' );
