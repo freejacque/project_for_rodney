@@ -42,7 +42,12 @@
         <?php endif; ?>
 
         <ol class="commentlist">
-            <?php wp_list_comments( array( 'callback' => 'kpb_comment' ) ); ?>
+            <?php
+            /*
+             * Loop through and list the comments. Tell wp_list_comments()
+             * to use kpb_comment() to format the comments.
+             */
+            wp_list_comments( array( 'callback' => 'kpb_comment' ) ); ?>
         </ol>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
