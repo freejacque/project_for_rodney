@@ -24,8 +24,6 @@
 
     <div id="comments" class="comments-area">
 
-    <?php ?>
-
     <?php if ( have_comments() ) : ?>
         <h2 class="comments-title">
             <?php
@@ -34,6 +32,7 @@
             ?>
         </h2>
 
+        <!-- if there are comments show navigation -->
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
         <nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
             <h1 class="assistive-text"><?php _e( 'Comment navigation', 'kpb' ); ?></h1>
