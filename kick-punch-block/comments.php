@@ -60,6 +60,7 @@
 
     <?php endif; ?>
 
+    <!-- if comments are closed & there are comments let users know -->
     <?php
         if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
     ?>
