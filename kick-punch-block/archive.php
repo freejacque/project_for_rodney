@@ -52,6 +52,7 @@ get_header(); ?>
                 echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
 
         } elseif ( is_tag() ) {
+            // show an optional tag description
             $tag_description = tag_description();
             if ( ! empty( $tag_description ) )
                 echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
