@@ -86,4 +86,27 @@ function kpb_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kpb_scripts');
 
+/**
+ * Setup the WordPress core custom background feature.
+ *
+ * Hooks into the after_setup_theme action.
+ *
+ */
+function kpb_register_custom_background() {
+    $args = array(
+        'default-color' => 'e9e0d1',
+    );
+
+    $args = apply_filters( 'kpb_custom_background_args', $args );
+
+    if ( function_exists( 'wp_get_theme' ) ) {
+        add_theme_support( 'custom-background', $args );
+    } else {
+        define( 'BACKGROUND_COLOR', $args['default-color'] );
+        define( 'BACKGROUND_IMAGE', $args['default-image'] );
+        add_custom_background();
+    }
+}
+add_action( 'after_setup_theme', 'kpb_register_custom_background' );
+
 // when a file is all php it's safer to omit the closing tag,, to avoid trailing white space errors
