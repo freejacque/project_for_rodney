@@ -94,7 +94,7 @@ add_action( 'wp_enqueue_scripts', 'kpb_scripts');
  */
 function kpb_register_custom_background() {
     $args = array(
-        'default-color' => 'e9e0d1',
+        'default-color' => 'fffff',
     );
 
     $args = apply_filters( 'kpb_custom_background_args', $args );
