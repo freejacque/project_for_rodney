@@ -55,6 +55,7 @@ function kpb_header_style() {
     ?>
     <style type="text/css">
     <?php
+        // is there a custom header image?
         if ( '' != get_header_image() ) :
     ?>
         .site-header img {
