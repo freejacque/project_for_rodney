@@ -1,6 +1,6 @@
 <?php
 /**
- * The Header for our theme.
+ * The Theme Header
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
@@ -58,6 +58,15 @@
         </h1>
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
       </hgroup>
+
+      <?php $header_image = get_header_image();
+        if ( ! empty( $header_image ) ) { ?>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+            </a>
+        <?php } // if ( ! empty( $header_image ) )
+      ?>
+
       <nav role="navigation" class="site-navigation main-navigation">
         <h1 class="assistive-text"><?php _e( 'Menu', 'KPB' ); ?></h1>
         <div class="assistive-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', '_s' ); ?>"><?php _e( 'Skip to content', 'KPB' ); ?></a></div>
