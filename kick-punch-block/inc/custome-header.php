@@ -63,7 +63,7 @@ function kpb_header_style() {
             margin: 1.5em auto 0;
         }
     <?php endif;
-
+        // is the text hidden?
         if ( 'blank' == get_header_textcolor() ) :
     ?>
         .site-title,
@@ -104,7 +104,7 @@ function kpb_admin_header_style() {
         border: none;
         min-height: 0 !important
     }
-    #headimg h1 {
+    #headimg h1 { /* site preview title display */
         font-size: 45px;
         font-family: Georgia, 'Times New Roman', serif;
         font-style: italic;
