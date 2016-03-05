@@ -24,7 +24,7 @@
 
     <?php else : ?>
 
-        <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kpb' ); ?></p>
+        <p><?php _e( 'We can&rsquo;t find what you&rsquo;re looking for. Try a search.', 'kpb' ); ?></p>
         <?php get_search_form(); ?>
 
     <?php endif; ?>
