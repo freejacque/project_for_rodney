@@ -16,7 +16,7 @@ get_header(); ?>
             </header>
 
             <div class="entry-content">
-                <p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'kpb' ); ?></p>
+                <p><?php _e( 'It looks like nothing was found at this location. Try one of the links below or a search?', 'kpb' ); ?></p>
 
                 <?php get_search_form(); ?>
 
