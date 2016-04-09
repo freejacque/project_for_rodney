@@ -12,6 +12,6 @@
   <p class="">Tag your entry photo with <span id="hashTag">#VSbestpic</span> on Instagram or Twitter and win a chance to be featured here and our headquarters for an entire week!</p>
   <p class="">This week's winner: <span id="winnerName"><?php ?></span></p>
   <div id="pow-photo">
-    <img src="" alt="">
+    <img src="<?php blogInfo('url');?>/wp-content/themes/kpb/images/photo+of_week.jpg" alt="photo of the week">
   </div>
 </div>
