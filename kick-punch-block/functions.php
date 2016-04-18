@@ -24,9 +24,9 @@ if( ! function_exists( 'kpb_setup' ) ):
    */
   function kpb_setup() {
     // Custom template tags
-    require( get_template_directory() ) . '/inc/template-tags.php' );
+    require( get_template_directory() . '/inc/template-tags.php' );
     // Custom independently acting functions
-    require( get_template_directory() ) . '/inc/tweaks.php' );
+    require( get_template_directory() . '/inc/tweaks.php' );
     //  make the theme available for translation
     load_theme_textdomain( 'Kick-Punch-Block', get_template_directory() . '/languages' );
     //  add default posts & rss feed links to head
