@@ -534,3 +534,14 @@ object {
 #searchsubmit {
     display: none;
 }
+
+/* =Headers
+---------------------------------------------- */
+#masthead {
+    height: 100px;
+}
+
+.site-title {
+    width: 300px;
+    display: inline-block;
+}
