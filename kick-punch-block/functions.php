@@ -83,6 +83,10 @@ function kpb_scripts() {
   if(is_singular() && wp_attachment_is_image() ) {
     wp_enqueue_script( 'Keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
   }
+
+  wp_register_script('html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', false
+);
+  wp_enqueue_script( 'html5-shim' );
 }
 add_action( 'wp_enqueue_scripts', 'kpb_scripts');
 
