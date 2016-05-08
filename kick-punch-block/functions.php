@@ -129,6 +129,9 @@ function kpb_styles() {
   wp_register_style( 'screen-style', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'all' );
   wp_enqueue_style( 'screen-style' );
 
+  wp_register_style( '', THEME_DIR . '/stylesheets/topbar.css', array(), '1', 'all' );
+  wp_enqueue_style( 'topbar-style' )
+
 }
 add_action( 'wp_enqueue_scripts', 'kpb_styles' );
 
