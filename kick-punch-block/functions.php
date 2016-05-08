@@ -120,4 +120,16 @@ function kpb_register_custom_background() {
 }
 add_action( 'after_setup_theme', 'kpb_register_custom_background' );
 
-// when a file is all php it's safer to omit the closing tag,, to avoid trailing white space errors
+/**
+* Enqueue Styles
+*/
+function kpb_styles() {
+
+  /** Register css/screen.css **/
+  wp_register_style( 'screen-style', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'all' );
+  wp_enqueue_style( 'screen-style' );
+
+}
+add_action( 'wp_enqueue_scripts', 'kpb_styles' );
+
+// when a file is all php it's safer to omit the closing tag, to avoid trailing white space errors
