@@ -92,7 +92,7 @@ function kpb_scripts() {
 );
   wp_enqueue_script( 'html5-shim' );
   // Register HTML5 OtherScript.js
-  wp_register_script( 'custom-script', THEME_DIR . '/js_path/customscript.js', array( 'jquery' ), '1', false );
+  wp_register_script( 'custom-script', THEME_DIR . '/js/customscript.js', array( 'jquery' ), '1', false );
   wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'kpb_scripts');
