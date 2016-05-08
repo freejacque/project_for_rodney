@@ -5,6 +5,10 @@
  * @since  Kick-Punch-Block 1.0
  */
 
+define("THEME_DIR", get_template_directory_uri());
+/* Remove generator meta tag */
+remove_action('wp_head', 'wp_generator');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
