@@ -88,11 +88,11 @@ function kpb_scripts() {
     wp_enqueue_script( 'Keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
   }
   // Register HTML5 shim
-  wp_register_script('html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', false
+  wp_register_script('html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', true
 );
   wp_enqueue_script( 'html5-shim' );
   // Register HTML5 OtherScript.js
-  wp_register_script( 'custom-script', THEME_DIR . '/js/customscript.js', array( 'jquery' ), '1', false );
+  wp_register_script( 'custom-script', THEME_DIR . '/js/customscript.js', array( 'jquery' ), '1', true );
   wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'kpb_scripts');
