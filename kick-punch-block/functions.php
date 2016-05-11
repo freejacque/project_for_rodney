@@ -129,9 +129,11 @@ function kpb_styles() {
   wp_register_style( 'screen-style', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'all' );
   wp_enqueue_style( 'screen-style' );
 
-  wp_register_style( '', THEME_DIR . '/stylesheets/topbar.css', array(), '1', 'all' );
+  wp_register_style( 'topbar-style', THEME_DIR . '/stylesheets/topbar.css', array(), '1', 'all' );
   wp_enqueue_style( 'topbar-style' );
 
+  wp_register_style( 'content-sidebar-sidebar-style', THEME_DIR . '/stylesheets/content-sidebar-sidebar.css', array(), '1', 'all' );
+  wp_enqueue_style( 'content-sidebar-sidebar-style' );
 }
 add_action( 'wp_enqueue_scripts', 'kpb_styles' );
 
